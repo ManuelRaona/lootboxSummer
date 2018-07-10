@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  raoninos = 100000;
+  comprar = true;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  buy() {
+    this.comprar = false;
+  }
+
+  buyRaoninos() {
+    this.comprar = true;
+  }
 }

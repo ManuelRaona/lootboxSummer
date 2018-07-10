@@ -1,13 +1,13 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { BuyComponent } from './components/buy/buy.component';
+import { FaqComponent } from './components/faq/faq.component';
 
-const appRoutes : Routes = [
+const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'buy', component: BuyComponent },
+    { path: 'faq', component: FaqComponent },
 
-    { path:'**', redirectTo: 'home'}
+    { path: '**', redirectTo: 'home'}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

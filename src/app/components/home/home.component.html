@@ -1,10 +1,37 @@
-<app-navbar></app-navbar>
-<div class="lBoxContainer">
+<app-navbar ></app-navbar>
+
+<div class="lboxNavigation__raoninos">
+    <label>{{raoninos}} Raoninos</label>
+</div>
+
+<div class="lBoxContainer" *ngIf="comprar">
     <div class="lBoxContainer">
       <div class="lBoxContainer__boxes">
         <app-low></app-low>
         <app-medium></app-medium>
-        <app-low></app-low>        
+        <app-hight></app-hight>     
       </div>
   </div>
 </div>
+
+<!-- BOTON PARA COMPRAR DINERO -->
+<button (click)="buy()" *ngIf="comprar">Comprar</button>
+
+<!-- VISTA PARA COMPRAR DINERO -->
+<div class="lBoxContainer" *ngIf="!comprar">
+    <div class="lBoxContainer__coins">
+      <div class="lBoxCard">
+        <div class="lBoxCard__inner">
+          <div class="lBoxCard__header">
+            asfdasfasdf
+          </div>
+          <div class="lBoxCard__body lBoxCard__body--raoninos">
+            asfsdafsdf
+          </div>  
+          <div class="lBoxCard__buyBtn">
+            <button (click)="buyRaoninos()">Comprar2</button>
+          </div>   
+        </div> 
+      </div>
+    </div>
+  </div>

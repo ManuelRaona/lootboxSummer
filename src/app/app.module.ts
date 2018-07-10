@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LowComponent } from './components/boxes/low/low.component';
 import { MediumComponent } from './components/boxes/medium/medium.component';
 import { HightComponent } from './components/boxes/hight/hight.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HightComponent } from './components/boxes/hight/hight.component';
     NavbarComponent,
     LowComponent,
     MediumComponent,
-    HightComponent
+    HightComponent,
+    FaqComponent
   ],
   imports: [
     routing,
