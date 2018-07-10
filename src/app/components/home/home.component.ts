@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -15,27 +16,18 @@ export class HomeComponent implements OnInit {
   source = '';
   giftImg = false;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.current.subscribe(message => {
+      this.raoninos += message;
+      this.comprar = true;
+    });
   }
 
-  // Actiba comprar Raoninos
+  // Activa comprar Raoninos
   buy() {
     this.comprar = false;
-  }
-
-  buyRaoninos(money: number) {
-    if (money === 10000) {
-      this.raoninos += 10000;
-    }
-    if (money === 50000) {
-      this.raoninos += 50000;
-    }
-    if (money === 100000) {
-      this.raoninos += 100000;
-    }
-    this.comprar = true;
   }
 
   buyBox(type: string) {

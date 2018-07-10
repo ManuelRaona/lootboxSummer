@@ -11,6 +11,7 @@ import { MediumComponent } from './components/boxes/medium/medium.component';
 import { HightComponent } from './components/boxes/hight/hight.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { ShowRaoninosComponent } from './components/show-raoninos/show-raoninos.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ShowRaoninosComponent } from './components/show-raoninos/show-raoninos.
     routing,
     BrowserModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

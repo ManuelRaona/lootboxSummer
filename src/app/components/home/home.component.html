@@ -56,52 +56,12 @@
   </div>
 </div>
 
-<!-- BOTON PARA COMPRAR DINERO -->
-<button (click)="buy()" *ngIf="comprar">Comprar</button>
+<!-- BOTON MUESTRA LA VISTA PARA COMPRAR DINERO -->
+<button (click)="buy()" *ngIf="comprar">Comprar Raonins</button>
 
 <!-- VISTA PARA COMPRAR DINERO -->
-<!-- <app-buy *ngIf="comprar"></app-buy> -->
-<div class="lBoxContainer" *ngIf="!comprar">
-  <div class="lBoxContainer__coins">
-    <div class="lBoxCard">
-      <div class="lBoxCard__inner">
-        <div class="lBoxCard__header">
-          BOX_HEADER
-        </div>
-        <div class="lBoxCard__body lBoxCard__body--raoninos">
-          10000
-        </div>  
-        <div class="lBoxCard__buyBtn">
-          <button (click)="buyRaoninos(10000)">Comprar</button>
-        </div>   
-      </div>
-      
-      <div class="lBoxCard__inner">
-          <div class="lBoxCard__header">
-            BOX_HEADER
-          </div>
-          <div class="lBoxCard__body lBoxCard__body--raoninos">
-            50000
-          </div>  
-          <div class="lBoxCard__buyBtn">
-            <button (click)="buyRaoninos(50000)">Comprar</button>
-          </div>   
-        </div>
+<app-buy *ngIf="!comprar"></app-buy>
 
-        <div class="lBoxCard__inner">
-            <div class="lBoxCard__header">
-              BOX_HEADER
-            </div>
-            <div class="lBoxCard__body lBoxCard__body--raoninos">
-              100000
-            </div>  
-            <div class="lBoxCard__buyBtn">
-              <button (click)="buyRaoninos(100000)">Comprar</button>
-            </div>   
-          </div>
-    </div>
-  </div>
-</div>
 
 <!-- ZONA PARA MOSTRAR EL GIFT OBTENIDO -->
 <div *ngIf="giftImg">
