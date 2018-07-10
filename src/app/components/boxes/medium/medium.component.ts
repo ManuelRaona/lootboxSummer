@@ -12,4 +12,8 @@ export class MediumComponent implements OnInit {
   ngOnInit() {
   }
 
+  buyMedium(price: number) {
+    console.log(price);
+  }
+
 }

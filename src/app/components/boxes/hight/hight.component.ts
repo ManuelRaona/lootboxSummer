@@ -12,4 +12,7 @@ export class HightComponent implements OnInit {
   ngOnInit() {
   }
 
+  buyHight(price: number) {
+    console.log(price);
+  }
 }

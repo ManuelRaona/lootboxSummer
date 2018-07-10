@@ -1,18 +1,42 @@
-<div class="lBoxContainer">
-  <div class="lBoxContainer__coins">
-    <div class="lBoxCard">
-      <div class="lBoxCard__inner">
-        <div class="lBoxCard__header">
-          
+<!-- VISTA PARA COMPRAR DINERO -->
+<div class="lBoxContainer" *ngIf="!comprar">
+    <div class="lBoxContainer__coins">
+      <div class="lBoxCard">
+        <div class="lBoxCard__inner">
+          <div class="lBoxCard__header">
+            BOX_HEADER
+          </div>
+          <div class="lBoxCard__body lBoxCard__body--raoninos">
+            10000
+          </div>  
+          <div class="lBoxCard__buyBtn">
+            <button (click)="buyRaoninos(10000)">Comprar</button>
+          </div>   
         </div>
-        <div class="lBoxCard__body lBoxCard__body--raoninos">
-          
-        </div>  
-        <div class="lBoxCard__buyBtn">
-          <!-- el boton debe tener el siguiente código (click)="buy(valor_de_la_compra)" -->
-          <button (click)="buy()">Comprar</button>
-        </div>   
-      </div> 
+        
+        <div class="lBoxCard__inner">
+            <div class="lBoxCard__header">
+              BOX_HEADER
+            </div>
+            <div class="lBoxCard__body lBoxCard__body--raoninos">
+              50000
+            </div>  
+            <div class="lBoxCard__buyBtn">
+              <button (click)="buyRaoninos(50000)">Comprar</button>
+            </div>   
+          </div>
+  
+          <div class="lBoxCard__inner">
+              <div class="lBoxCard__header">
+                BOX_HEADER
+              </div>
+              <div class="lBoxCard__body lBoxCard__body--raoninos">
+                100000
+              </div>  
+              <div class="lBoxCard__buyBtn">
+                <button (click)="buyRaoninos(100000)">Comprar</button>
+              </div>   
+            </div>
+      </div>
     </div>
   </div>
-</div>

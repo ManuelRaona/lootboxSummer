@@ -8,23 +8,30 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 export class BuyComponent implements OnInit {
-@Output() add: EventEmitter<string> = new EventEmitter();
+@Output() public add = new EventEmitter<number>();
+
+  // raoninos: number;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  // buy(coste) {
-  //   const totalRaoninos = localStorage.getItem('raoninos');
-  //   let raoninos = parseInt(totalRaoninos, 10);
-  //   raoninos = raoninos + coste;
-  //   localStorage.setItem('raoninos', raoninos.toString());
-  // }
 
-  public buy(operation: Number) {
-    const texto = 'HOLAAA';
-    this.add.emit(texto);
+  buyRaoninos(money: number) {
+    if (money === 10000) {
+      this.add.emit(1000);
+      // this.raoninos += 10000;
+    }
+    if (money === 50000) {
+      this.add.emit(50000);
+      // this.raoninos += 50000;
+    }
+    if (money === 100000) {
+      this.add.emit(100000);
+      // this.raoninos += 100000;
+    }
+    // this.comprar = true;
   }
 
 }

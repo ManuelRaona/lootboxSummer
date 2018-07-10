@@ -4,12 +4,54 @@
     <label>{{raoninos}} Raoninos</label>
 </div>
 
+<!-- <app-show-raoninos (add)="buyRaoninos($event)"></app-show-raoninos> -->
+
 <div class="lBoxContainer" *ngIf="comprar">
     <div class="lBoxContainer">
       <div class="lBoxContainer__boxes">
-        <app-low></app-low>
-        <app-medium></app-medium>
-        <app-hight></app-hight>     
+          <!-- LOW BOX -->
+          <div class="lBoxCard">
+              <div class="lBoxCard__inner">
+                <div class="lBoxCard__header">
+                  
+                </div>
+                <div class="lBoxCard__body lBoxCard__body--low">
+                  
+                </div>  
+                <div class="lBoxCard__buyBtn">
+                  <button (click)="buyBox('low')">Buy</button>
+                </div>   
+              </div> 
+            </div>
+            <!-- MEDIUM BOX -->
+            <div class="lBoxCard">
+              <div class="lBoxCard__inner">
+                <div class="lBoxCard__header">
+                  
+                </div>
+                <div class="lBoxCard__body lBoxCard__body--medium">
+                  
+                </div>  
+                <div class="lBoxCard__buyBtn">
+                  <button (click)="buyBox('medium')">Buy</button>
+                </div>   
+              </div> 
+            </div>
+          <!-- HIGHT BOX -->
+          <div class="lBoxCard">
+            <div class="lBoxCard__inner">
+              <div class="lBoxCard__header">
+                
+              </div>
+              <div class="lBoxCard__body lBoxCard__body--hight">
+                
+              </div>  
+              <div class="lBoxCard__buyBtn">
+                <button (click)="buyBox('hight')">Buy</button>
+              </div>   
+            </div> 
+          </div>  
+
       </div>
   </div>
 </div>
@@ -18,20 +60,51 @@
 <button (click)="buy()" *ngIf="comprar">Comprar</button>
 
 <!-- VISTA PARA COMPRAR DINERO -->
+<!-- <app-buy *ngIf="comprar"></app-buy> -->
 <div class="lBoxContainer" *ngIf="!comprar">
-    <div class="lBoxContainer__coins">
-      <div class="lBoxCard">
-        <div class="lBoxCard__inner">
+  <div class="lBoxContainer__coins">
+    <div class="lBoxCard">
+      <div class="lBoxCard__inner">
+        <div class="lBoxCard__header">
+          BOX_HEADER
+        </div>
+        <div class="lBoxCard__body lBoxCard__body--raoninos">
+          10000
+        </div>  
+        <div class="lBoxCard__buyBtn">
+          <button (click)="buyRaoninos(10000)">Comprar</button>
+        </div>   
+      </div>
+      
+      <div class="lBoxCard__inner">
           <div class="lBoxCard__header">
-            asfdasfasdf
+            BOX_HEADER
           </div>
           <div class="lBoxCard__body lBoxCard__body--raoninos">
-            asfsdafsdf
+            50000
           </div>  
           <div class="lBoxCard__buyBtn">
-            <button (click)="buyRaoninos()">Comprar2</button>
+            <button (click)="buyRaoninos(50000)">Comprar</button>
           </div>   
-        </div> 
-      </div>
+        </div>
+
+        <div class="lBoxCard__inner">
+            <div class="lBoxCard__header">
+              BOX_HEADER
+            </div>
+            <div class="lBoxCard__body lBoxCard__body--raoninos">
+              100000
+            </div>  
+            <div class="lBoxCard__buyBtn">
+              <button (click)="buyRaoninos(100000)">Comprar</button>
+            </div>   
+          </div>
     </div>
   </div>
+</div>
+
+<!-- ZONA PARA MOSTRAR EL GIFT OBTENIDO -->
+<div *ngIf="giftImg">
+  <img src={{source}} />
+  <button (click)="closeGift()">Cerrar</button>
+</div>

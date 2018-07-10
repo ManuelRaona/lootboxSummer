@@ -12,9 +12,7 @@ export class LowComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
-  buy(event) {
-    console.log(event);
-  }
+  buyLow(price: number) {
+    console.log(price);
+    }
 }

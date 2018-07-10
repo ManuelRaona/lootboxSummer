@@ -10,6 +10,7 @@ import { LowComponent } from './components/boxes/low/low.component';
 import { MediumComponent } from './components/boxes/medium/medium.component';
 import { HightComponent } from './components/boxes/hight/hight.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { ShowRaoninosComponent } from './components/show-raoninos/show-raoninos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FaqComponent } from './components/faq/faq.component';
     LowComponent,
     MediumComponent,
     HightComponent,
-    FaqComponent
+    FaqComponent,
+    ShowRaoninosComponent
   ],
   imports: [
     routing,
