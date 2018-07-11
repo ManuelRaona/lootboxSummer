@@ -1,1 +1,127 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/*Variables*/
+$color01: #F3F3F3;
+$color02: #FFB800;
+$color03: #888888;
+$box01: #92C77C;
+$box02: #3F9BCE;
+$box03: #B47ACF;
+
+/*Mixins*/
+
+
+/*Extends*/
+%basicFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Contenido*/
+/*General*/
+body{
+    font-family: 'Raleway', sans-serif;
+    color: $color03;
+}
+p{
+    margin-top: 0;
+    color: $color03;
+}
+/*NavBar*/
+  .lboxNavigation{
+    @extend %basicFlex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 3px solid $color01;
+
+    &__user{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        span{
+            padding-left: 15px;
+        }
+    }
+    &__logo{
+        cursor: pointer;
+        font-weight: 500;
+    }
+    &__faq{
+        cursor: pointer;
+    }
+}
+
+.lboxRaoninos {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        color: $color02;
+
+        &__buyRaoninos {
+            cursor: pointer;
+            border: none;
+            background: $color02;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 15px;
+            margin-left: 6px;
+    }
+}
+
+.lBoxContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lBoxCard {
+    cursor: pointer;
+    flex: 0 1 336px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    &__header {
+        border-radius: 10px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        &--low{
+            background-color: $box01;
+        }
+        &--medium{
+            background-color: $box02;
+        }
+        &--hight{   
+            background-color: $box03;
+        }
+    }
+    &__body {
+        height: 100px;
+        padding: 15px;
+        &--raoninos{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__bodyRaonino{
+        color: $color02;
+        &--buy{
+            align-self: center; 
+        }
+    }
+    &__boxImg{
+        align-self: center;
+        height: 80px;
+    }
+}
+
+.lBoxModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+/*Variables*/
+/*Mixins*/
+/*Extends*/
+.lboxNavigation {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Contenido*/
+/*General*/
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #888888;
+}
+
+p {
+  margin-top: 0;
+  color: #888888;
+}
+
+/*NavBar*/
+.lboxNavigation {
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 3px solid #F3F3F3;
+}
+
+.lboxNavigation__user {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.lboxNavigation__user span {
+  padding-left: 15px;
+}
+
+.lboxNavigation__logo {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.lboxNavigation__faq {
+  cursor: pointer;
+}
+
+.lboxRaoninos {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  color: #FFB800;
+}
+
+.lboxRaoninos__buyRaoninos {
+  cursor: pointer;
+  border: none;
+  background: #FFB800;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 15px;
+  margin-left: 6px;
+}
+
+.lBoxContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lBoxCard {
+  cursor: pointer;
+  flex: 0 1 336px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.lBoxCard__header {
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.lBoxCard__header--low {
+  background-color: #92C77C;
+}
+
+.lBoxCard__header--medium {
+  background-color: #3F9BCE;
+}
+
+.lBoxCard__header--hight {
+  background-color: #B47ACF;
+}
+
+.lBoxCard__body {
+  height: 100px;
+  padding: 15px;
+}
+
+.lBoxCard__body--raoninos {
+  display: flex;
+  justify-content: center;
+}
+
+.lBoxCard__bodyRaonino {
+  color: #FFB800;
+}
+
+.lBoxCard__bodyRaonino--buy {
+  align-self: center;
+}
+
+.lBoxCard__boxImg {
+  align-self: center;
+  height: 80px;
+}
+
+.lBoxModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

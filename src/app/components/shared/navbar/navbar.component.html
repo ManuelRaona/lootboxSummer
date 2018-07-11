@@ -1,10 +1,14 @@
 <div class="lboxNavigation">
-  <div class="lboxNavigation__inner">
-    <div class="lboxNavigation__user">
-      <img src="#" (click)="goTo('home')"/>
-    </div>
-    <div class="lboxNavigation__logo">
-      <img src="#" (click)="goTo('faq')"/>      
-    </div>
+  <div class="lboxNavigation__user">
+    <img src="../../../../assets/img/Face.png" (click)="goTo('home')"/>
+    <span>Random User</span>
+  </div>
+  <span class="lboxNavigation__logo" (click)="goTo('home')">
+      Loot Box Simulator
+    </span> 
+  <div class="lboxNavigation__faq">
+    <span src="#" (click)="goTo('faq')">
+      F.A.Q
+    </span>    
   </div>
 </div>

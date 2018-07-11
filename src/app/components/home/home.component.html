@@ -1,70 +1,59 @@
 <app-navbar ></app-navbar>
 
-<div class="lboxNavigation__raoninos">
-    <label>{{raoninos}} Raoninos</label>
-</div>
+<div class="lboxRaoninos">
+<label><img src="../../../../assets/img/Raonino.png"/> {{raoninos}} <button class="lboxRaoninos__buyRaoninos" (click)="buy()" *ngIf="comprar">+</button></label>
+ </div>
 
 <!-- <app-show-raoninos (add)="buyRaoninos($event)"></app-show-raoninos> -->
 
 <div class="lBoxContainer" *ngIf="comprar">
-    <div class="lBoxContainer">
-      <div class="lBoxContainer__boxes">
-          <!-- LOW BOX -->
-          <div class="lBoxCard">
-              <div class="lBoxCard__inner">
-                <div class="lBoxCard__header">
-                  
-                </div>
-                <div class="lBoxCard__body lBoxCard__body--low">
-                  
-                </div>  
-                <div class="lBoxCard__buyBtn">
-                  <button (click)="buyBox('low')">Buy</button>
-                </div>   
-              </div> 
-            </div>
-            <!-- MEDIUM BOX -->
-            <div class="lBoxCard">
-              <div class="lBoxCard__inner">
-                <div class="lBoxCard__header">
-                  
-                </div>
-                <div class="lBoxCard__body lBoxCard__body--medium">
-                  
-                </div>  
-                <div class="lBoxCard__buyBtn">
-                  <button (click)="buyBox('medium')">Buy</button>
-                </div>   
-              </div> 
-            </div>
-          <!-- HIGHT BOX -->
-          <div class="lBoxCard">
-            <div class="lBoxCard__inner">
-              <div class="lBoxCard__header">
-                
-              </div>
-              <div class="lBoxCard__body lBoxCard__body--hight">
-                
-              </div>  
-              <div class="lBoxCard__buyBtn">
-                <button (click)="buyBox('hight')">Buy</button>
-              </div>   
-            </div> 
-          </div>  
-
-      </div>
-  </div>
+  <!-- LOW BOX -->
+    <div class="lBoxCard" (click)="buyBox('low')">
+      <div class="lBoxCard__inner">
+        <div class="lBoxCard__header lBoxCard__header--low">
+          <img class="lBoxCard__boxImg" src="../../../assets/img/BasicBox.png"/>
+        </div>
+        <div class="lBoxCard__body">
+            <p class="lBoxCard__bodyTitle">Noob Loot Box</p>
+            <p class="lBoxCard__bodyRaonino"><img src="../../../../assets/img/Raonino.png"/> 100</p>
+        </div>  
+      </div> 
+    </div>
+    <!-- MEDIUM BOX -->
+    <div class="lBoxCard" (click)="buyBox('medium')">
+      <div class="lBoxCard__inner">
+        <div class="lBoxCard__header lBoxCard__header--medium">
+          <img class="lBoxCard__boxImg" src="../../../assets/img/ProBox.png"/>
+        </div>
+        <div class="lBoxCard__body ">
+            <p class="lBoxCard__bodyTitle">Noob Loot Box</p>
+            <p class="lBoxCard__bodyRaonino"><img src="../../../../assets/img/Raonino.png"/> 1000 </p>
+        </div>  
+      </div> 
+    </div>
+  <!-- HIGHT BOX -->
+  <div class="lBoxCard" (click)="buyBox('hight')">
+    <div class="lBoxCard__inner">
+      <div class="lBoxCard__header lBoxCard__header--hight">
+          <img class="lBoxCard__boxImg" src="../../../assets/img/MasterBox.png"/>
+        </div>
+      <div class="lBoxCard__body ">
+        <p class="lBoxCard__bodyTitle">Noob Loot Box</p>
+        <p class="lBoxCard__bodyRaonino"><img src="../../../../assets/img/Raonino.png"/> 10000</p>
+      </div>  
+  
+    </div> 
+  </div>  
 </div>
-
-<!-- BOTON MUESTRA LA VISTA PARA COMPRAR DINERO -->
-<button (click)="buy()" *ngIf="comprar">Comprar Raonins</button>
 
 <!-- VISTA PARA COMPRAR DINERO -->
 <app-buy *ngIf="!comprar"></app-buy>
 
 
 <!-- ZONA PARA MOSTRAR EL GIFT OBTENIDO -->
-<div *ngIf="giftImg">
-  <img src={{source}} />
-  <button (click)="closeGift()">Cerrar</button>
+<div class="lBoxModal" *ngIf="giftImg">
+  <div class="lBoxModal__card">
+    <img class="lBoxModal__img" src={{source}} />
+    <button class="lBoxModal__btn" (click)="closeGift()">Cerrar</button>
+  </div>
 </div>

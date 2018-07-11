@@ -1,42 +1,33 @@
 <!-- VISTA PARA COMPRAR DINERO -->
-<div class="lBoxContainer">
-    <div class="lBoxContainer__coins">
+<div class="lBoxContainer" (click)="buyRaoninos(10000)">
       <div class="lBoxCard">
         <div class="lBoxCard__inner">
           <div class="lBoxCard__header">
-            BOX_HEADER
+            <img class="lBoxCard__boxImg" src="../../../../assets/img/low.png"/>
           </div>
           <div class="lBoxCard__body lBoxCard__body--raoninos">
-            10000
+            <p class="lBoxCard__bodyRaonino lBoxCard__bodyRaonino--buy"><img src="../../../../assets/img/Raonino.png"/> 10000</p>
           </div>  
-          <div class="lBoxCard__buyBtn">
-            <button (click)="buyRaoninos(10000)">Comprar</button>
-          </div>   
         </div>
-        
-        <div class="lBoxCard__inner">
+        </div>
+      <div class="lBoxCard" (click)="buyRaoninos(50000)">
+          <div class="lBoxCard__inner">
             <div class="lBoxCard__header">
-              BOX_HEADER
+              <img class="lBoxCard__boxImg" src="../../../../assets/img/medium.png"/>
             </div>
             <div class="lBoxCard__body lBoxCard__body--raoninos">
-              50000
+              <p class="lBoxCard__bodyRaonino lBoxCard__bodyRaonino--buy"><img src="../../../../assets/img/Raonino.png"/> 50000</p>
             </div>  
-            <div class="lBoxCard__buyBtn">
-              <button (click)="buyRaoninos(50000)">Comprar</button>
-            </div>   
           </div>
-  
+      </div>
+      <div class="lBoxCard" (click)="buyRaoninos(100000)">
           <div class="lBoxCard__inner">
               <div class="lBoxCard__header">
-                BOX_HEADER
+                <img class="lBoxCard__boxImg" src="../../../../assets/img/hight.png"/>
               </div>
               <div class="lBoxCard__body lBoxCard__body--raoninos">
-                100000
-              </div>  
-              <div class="lBoxCard__buyBtn">
-                <button (click)="buyRaoninos(100000)">Comprar</button>
+                <p class="lBoxCard__bodyRaonino lBoxCard__bodyRaonino--buy"><img src="../../../../assets/img/Raonino.png"/> 100000</p>
               </div>   
             </div>
-      </div>
+        </div>
     </div>
-  </div>
