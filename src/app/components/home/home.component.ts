@@ -8,7 +8,7 @@ import { DataService } from '../../services/data.service';
 })
 export class HomeComponent implements OnInit {
 
-  raoninos = 100000;
+  raoninos = 10000;
   comprar = true;
   lowBox = ['0.png', '1.png', '2.png', '3.png', '4.png', '5.png']; // poner los nombres de las imagenes siempre con la extension .png
   mediumBox = ['', '', '', '']; // poner los nombres de las imagenes
@@ -46,20 +46,20 @@ export class HomeComponent implements OnInit {
   }
 
   openLowBox() {
-    this.raoninos -= 10000;
+    this.raoninos -= 1000;
     const gift = this.randomize(this.lowBox.length - 1);
     this.source = 'assets/lowGifts/' + gift.toString() + '.png';
     console.log(gift);
   }
 
   openMediumBox() {
-    this.raoninos -= 50000;
+    this.raoninos -= 5000;
     const gift = this.randomize(this.mediumBox.length - 1);
     this.source = 'assets/mediumGifts/' + gift.toString() + '.png';
   }
 
   openHightBox() {
-    this.raoninos -= 100000;
+    this.raoninos -= 10000;
     const gift = this.randomize(this.hihgtBox.length - 1);
     this.source = 'assets/hightGifts/' + gift.toString() + '.png';
   }
@@ -71,6 +71,33 @@ export class HomeComponent implements OnInit {
 
   closeGift() {
     this.giftImg = false;
+  }
+
+  evaluateLow() {
+    if (this.raoninos < 100){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+
+  evaluateMedium() {
+    if (this.raoninos < 500){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+
+  evaluateHight() {
+    if (this.raoninos < 1000){
+      return false;
+    }
+    else {
+      return true;
+    }
   }
 
 }

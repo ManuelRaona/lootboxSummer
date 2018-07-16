@@ -8,7 +8,7 @@
 
 <div class="lBoxContainer" *ngIf="comprar">
   <!-- LOW BOX -->
-    <div class="lBoxCard" (click)="buyBox('low')">
+    <div class="lBoxCard">
       <div class="lBoxCard__inner">
         <div class="lBoxCard__header lBoxCard__header--low">
           <img class="lBoxCard__boxImg" src="../../../assets/img/BasicBox.png"/>
@@ -16,11 +16,13 @@
         <div class="lBoxCard__body">
             <p class="lBoxCard__bodyTitle">Noob Loot Box</p>
             <p class="lBoxCard__bodyRaonino"><img src="../../../../assets/img/Raonino.png"/> 100</p>
-        </div>  
+            <button class="lBoxCard__buyBtn" [ngClass]="{'lBoxCard__buyBtn--disable' : !(raoninos>100)}" (click)="buyBox('low')">Comprar</button>  
+          </div>
+
       </div> 
     </div>
     <!-- MEDIUM BOX -->
-    <div class="lBoxCard" (click)="buyBox('medium')">
+    <div class="lBoxCard" (click)="buyBox('medium')" *ngIf="raoninos>500">
       <div class="lBoxCard__inner">
         <div class="lBoxCard__header lBoxCard__header--medium">
           <img class="lBoxCard__boxImg" src="../../../assets/img/ProBox.png"/>
@@ -32,7 +34,7 @@
       </div> 
     </div>
   <!-- HIGHT BOX -->
-  <div class="lBoxCard" (click)="buyBox('hight')">
+  <div class="lBoxCard" (click)="buyBox('hight')" *ngIf="raoninos>1000">
     <div class="lBoxCard__inner">
       <div class="lBoxCard__header lBoxCard__header--hight">
           <img class="lBoxCard__boxImg" src="../../../assets/img/MasterBox.png"/>
@@ -52,8 +54,10 @@
 
 <!-- ZONA PARA MOSTRAR EL GIFT OBTENIDO -->
 <div class="lBoxModal" *ngIf="giftImg">
-  <div class="lBoxModal__card">
-    <img class="lBoxModal__img" src={{source}} />
-    <button class="lBoxModal__btn" (click)="closeGift()">Cerrar</button>
+  <div class="lBoxModal__dialog">
+    <div class="lBoxModal__card">
+      <img class="lBoxModal__img" src={{source}} />
+      <button class="lBoxModal__btn" (click)="closeGift()">Cerrar</button>
+    </div>
   </div>
 </div>

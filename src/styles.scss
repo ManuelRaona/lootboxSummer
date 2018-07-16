@@ -115,13 +115,25 @@ p{
         align-self: center;
         height: 80px;
     }
+    &__buyBtn{
+        border: none;
+        background-color: $color02;
+        padding: 10px 15px;
+        color: #fff;
+        &--disable{
+            pointer-events: none;
+            background-color: $color03;
+        }
+    }
 }
 
 .lBoxModal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
 
 }
